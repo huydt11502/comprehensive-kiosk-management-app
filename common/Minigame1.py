@@ -3,144 +3,87 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(478,850)
+        MainWindow.setWindowTitle("Hộp Quà May Mắn")
+        MainWindow.setFixedSize(398, 708)
 
-        self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
-
-
-        self.label_5 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(-310, 630, 251, 31))
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_5.setFont(font)
-        self.label_5.setStyleSheet("color: rgb(255, 255, 255);")
-        self.label_5.setText("")
-        self.label_5.setObjectName("label_5")
-
-        # grid layout
-        self.gridLayoutWidget = QtWidgets.QWidget(parent=self.centralwidget)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(130, 30, 301, 511))
-        self.gridLayoutWidget.setObjectName("gridLayoutWidget")
-        self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout.setObjectName("gridLayout")
-
-        # frame
-        self.frame_4 = QtWidgets.QFrame(parent=self.gridLayoutWidget)
-        self.frame_4.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.frame_4.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.frame_4.setObjectName("frame_4")
-        self.widget = QtWidgets.QWidget(parent=self.frame_4)
-        self.widget.setGeometry(QtCore.QRect(0, 160, 301, 351))
-        self.widget.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.widget.setObjectName("widget")
-
-        # box1
-        self.label_box1 = QtWidgets.QLabel(parent=self.widget)
-        self.label_box1.setGeometry(QtCore.QRect(40, 20, 81, 81))
-        self.label_box1.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.label_box1.setText("")
-        self.label_box1.setPixmap(QtGui.QPixmap("D:\\hoccode\\QT Designer\\TEST\\doanktlt\\ui\\../../../../../ktlt_đồ án/hop-qua-vivo-tai-nghe-op-lung-mieng-dan-600x600.jpg"))
-        self.label_box1.setScaledContents(True)
-        self.label_box1.setObjectName("label_box1")
-
-        #box2
-        self.label_box2 = QtWidgets.QLabel(parent=self.widget)
-        self.label_box2.setGeometry(QtCore.QRect(180, 20, 81, 81))
-        self.label_box2.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.label_box2.setText("")
-        self.label_box2.setPixmap(QtGui.QPixmap("D:\\hoccode\\QT Designer\\TEST\\doanktlt\\ui\\../../../../../ktlt_đồ án/hop-qua-vivo-tai-nghe-op-lung-mieng-dan-600x600.jpg"))
-        self.label_box2.setScaledContents(True)
-        self.label_box2.setObjectName("label_box2")
-
-        #box3
-        self.label_box3 = QtWidgets.QLabel(parent=self.widget)
-        self.label_box3.setGeometry(QtCore.QRect(40, 130, 81, 81))
-        self.label_box3.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.label_box3.setText("")
-        self.label_box3.setPixmap(QtGui.QPixmap("D:\\hoccode\\QT Designer\\TEST\\doanktlt\\ui\\../../../../../ktlt_đồ án/hop-qua-vivo-tai-nghe-op-lung-mieng-dan-600x600.jpg"))
-        self.label_box3.setScaledContents(True)
-        self.label_box3.setObjectName("label_box3")
-
-        #box4
-        self.label_box4 = QtWidgets.QLabel(parent=self.widget)
-        self.label_box4.setGeometry(QtCore.QRect(180, 130, 81, 81))
-        self.label_box4.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.label_box4.setText("")
-        self.label_box4.setPixmap(QtGui.QPixmap("D:\\hoccode\\QT Designer\\TEST\\doanktlt\\ui\\../../../../../ktlt_đồ án/hop-qua-vivo-tai-nghe-op-lung-mieng-dan-600x600.jpg"))
-        self.label_box4.setScaledContents(True)
-        self.label_box4.setObjectName("label_box4")
-
-        #box5
-        self.label_box5 = QtWidgets.QLabel(parent=self.widget)
-        self.label_box5.setGeometry(QtCore.QRect(40, 240, 81, 81))
-        self.label_box5.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.label_box5.setText("")
-        self.label_box5.setPixmap(QtGui.QPixmap("D:\\hoccode\\QT Designer\\TEST\\doanktlt\\ui\\../../../../../ktlt_đồ án/hop-qua-vivo-tai-nghe-op-lung-mieng-dan-600x600.jpg"))
-        self.label_box5.setScaledContents(True)
-        self.label_box5.setObjectName("label_box5")
-
-        #box6
-        self.label_box6 = QtWidgets.QLabel(parent=self.widget)
-        self.label_box6.setGeometry(QtCore.QRect(180, 240, 81, 81))
-        self.label_box6.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.label_box6.setText("")
-        self.label_box6.setPixmap(QtGui.QPixmap("D:\\hoccode\\QT Designer\\TEST\\doanktlt\\ui\\../../../../../ktlt_đồ án/hop-qua-vivo-tai-nghe-op-lung-mieng-dan-600x600.jpg"))
-        self.label_box6.setScaledContents(True)
-        self.label_box6.setObjectName("label_box6")
-
-
-        self.frame_5 = QtWidgets.QFrame(parent=self.frame_4)
-        self.frame_5.setGeometry(QtCore.QRect(0, 129, 301, 31))
-        self.frame_5.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.frame_5.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.frame_5.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.frame_5.setObjectName("frame_5")
-        self.label_title = QtWidgets.QLabel(parent=self.frame_5)
-        self.label_title.setGeometry(QtCore.QRect(30, 10, 121, 16))
-        font = QtGui.QFont()
-        font.setBold(True)
-
-        # title
-        self.label_title.setFont(font)
-        self.label_title.setObjectName("label_title")
-        self.label_11 = QtWidgets.QLabel(parent=self.frame_5)
-        self.label_11.setGeometry(QtCore.QRect(10, 10, 21, 16))
-        self.label_11.setObjectName("label_11")
-
-        # hình ảnh
-        self.label_image = QtWidgets.QLabel(parent=self.frame_4)
-        self.label_image.setGeometry(QtCore.QRect(0, 0, 301, 131))
-        self.label_image.setText("")
-        self.label_image.setPixmap(QtGui.QPixmap("D:\\hoccode\\QT Designer\\TEST\\doanktlt\\ui\\../../../../../ktlt_đồ án/subiz-minigame-la-gi-e1704609883891.jpg"))
-        self.label_image.setScaledContents(True)
-        self.label_image.setObjectName("label_image")
-
-
-        self.gridLayout.addWidget(self.frame_4, 0, 0, 1, 1)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1723, 26))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        # Đặt nền trắng cho toàn bộ giao diện
+        MainWindow.setStyleSheet("background-color: white;")
+        self.centralwidget.setStyleSheet("background-color: white;")
 
-    def retranslateUi(self, MainWindow):
-        _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_title.setText(_translate("MainWindow", "Hộp quà may mắn"))
-        self.label_11.setText(_translate("MainWindow", "<"))
+        main_layout = QtWidgets.QVBoxLayout(self.centralwidget)
+
+        # Ảnh tiêu đề
+        self.label_image = QtWidgets.QLabel()
+        self.label_image.setPixmap(
+            QtGui.QPixmap("D:/hoccode/QT Designer/TEST/doanktlt/anh/subiz-minigame-la-gi-e1704609883891.jpg"))
+        self.label_image.setScaledContents(True)
+        self.label_image.setFixedHeight(150) #Size cho ảnh minigame
+        main_layout.addWidget(self.label_image)
+
+        # Tiêu đề chính
+        # Layout chứa nút và tiêu đề
+        button_layout1 = QtWidgets.QHBoxLayout()
+
+        # Nút quay lại
+        self.button_back = QtWidgets.QPushButton()
+        pixmap = QtGui.QPixmap(
+            r"D:\hoccode\QT Designer\TEST\doanktlt\anh\png-clipart-button-question-mark-computer-icons-check-mark-back-button-text-black-thumbnail.png")
+        icon = QtGui.QIcon(pixmap)
+        self.button_back.setIcon(icon)
+        self.button_back.setIconSize(QtCore.QSize(30, 30))
+        button_layout1.addWidget(self.button_back)
+
+        # khoảng trống giữa nút và tiêu đề
+        spacer = QtWidgets.QSpacerItem(5, 5, QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Minimum)
+        button_layout1.addItem(spacer)
+
+        # Tiêu đề chính
+        self.label_title = QtWidgets.QLabel("Hộp Quà May Mắn")
+        self.label_title.setStyleSheet("font-size: 20px; font-weight: bold; color: black;")
+        self.label_title.setAlignment(QtCore.Qt.AlignmentFlag.AlignVCenter)  # Căn giữa theo chiều dọc
+        self.label_title.setSizePolicy(QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Preferred)
+        button_layout1.addWidget(self.label_title)
+
+        main_layout.addLayout(button_layout1)
+
+        # grid_ Layout chứa 6 hộp quà
+        grid_layout = QtWidgets.QGridLayout()
+        grid_layout.setSpacing(20)
+
+        image_path = "D:/hoccode/QT Designer/TEST/doanktlt/anh/hop-qua-vivo-tai-nghe-op-lung-mieng-dan-600x600.jpg"
+        self.boxes = []
+
+        for i in range(8):
+            button = QtWidgets.QPushButton()
+            button.setFixedSize(100, 100)
+            button.setStyleSheet(f"border-image: url({image_path}); border-radius: 10px;")
+
+            # Hộp quà số 0, 2, 4 gọi open_gift()
+            if i%2 ==0:
+                button.clicked.connect(lambda _, x=i: self.open_gift(x))
+            # Hộp quà số 1, 3, 5 gọi open_gift_1()
+            else:
+                button.clicked.connect(lambda _, x=i: self.open_gift_1(x))
+
+            self.boxes.append(button)
+            grid_layout.addWidget(button, i // 2, i % 2)  # 2 hàng, 3 cột
+
+        main_layout.addLayout(grid_layout)
+
+    def open_gift(self, box_number):
+        dialog = UI_luck(self.centralwidget)
+        dialog.exec()
+
+    def open_gift_1(self, box_number):
+        dialog = UI_noluck(self.centralwidget)
+        dialog.exec()
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
