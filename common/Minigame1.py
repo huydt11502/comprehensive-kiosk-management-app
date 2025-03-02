@@ -1,5 +1,6 @@
-from PyQt6 import QtCore, QtGui, QtWidgets
+import os
 
+from PyQt6 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -17,8 +18,10 @@ class Ui_MainWindow(object):
 
         # Ảnh tiêu đề
         self.label_image = QtWidgets.QLabel()
-        self.label_image.setPixmap(
-            QtGui.QPixmap("D:/hoccode/QT Designer/TEST/doanktlt/anh/subiz-minigame-la-gi-e1704609883891.jpg"))
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        image_path = os.path.join(base_dir, "..", "kiosk_app", "resources", "images", "img_bannerminigame.png")
+        pixmap = QtGui.QPixmap(image_path)
+        self.label_image.setPixmap(pixmap)
         self.label_image.setScaledContents(True)
         self.label_image.setFixedHeight(150) #Size cho ảnh minigame
         main_layout.addWidget(self.label_image)
@@ -29,10 +32,9 @@ class Ui_MainWindow(object):
 
         # Nút quay lại
         self.button_back = QtWidgets.QPushButton()
-        pixmap = QtGui.QPixmap(
-            r"D:\hoccode\QT Designer\TEST\doanktlt\anh\png-clipart-button-question-mark-computer-icons-check-mark-back-button-text-black-thumbnail.png")
-        icon = QtGui.QIcon(pixmap)
-        self.button_back.setIcon(icon)
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        icon_path = os.path.join(base_dir, "..", "kiosk_app", "resources", "images", "img_backbutton.png")
+        self.button_back.setIcon(QtGui.QIcon(icon_path))
         self.button_back.setIconSize(QtCore.QSize(30, 30))
         button_layout1.addWidget(self.button_back)
 
@@ -52,34 +54,18 @@ class Ui_MainWindow(object):
         # grid_ Layout chứa 6 hộp quà
         grid_layout = QtWidgets.QGridLayout()
         grid_layout.setSpacing(20)
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        icon_path = os.path.join(base_dir, "..", "kiosk_app", "resources", "images", "img_hopqua.png")
 
-        image_path = "D:/hoccode/QT Designer/TEST/doanktlt/anh/hop-qua-vivo-tai-nghe-op-lung-mieng-dan-600x600.jpg"
-        self.boxes = []
-
+        # 8 hộp quà
         for i in range(8):
             button = QtWidgets.QPushButton()
             button.setFixedSize(100, 100)
-            button.setStyleSheet(f"border-image: url({image_path}); border-radius: 10px;")
-
-            # Hộp quà số 0, 2, 4 gọi open_gift()
-            if i%2 ==0:
-                button.clicked.connect(lambda _, x=i: self.open_gift(x))
-            # Hộp quà số 1, 3, 5 gọi open_gift_1()
-            else:
-                button.clicked.connect(lambda _, x=i: self.open_gift_1(x))
-
-            self.boxes.append(button)
-            grid_layout.addWidget(button, i // 2, i % 2)  # 2 hàng, 3 cột
+            button.setIcon(QtGui.QIcon(icon_path))
+            button.setIconSize(QtCore.QSize(80, 80)) # kích thước hộp quà nhỏ hơn button
+            grid_layout.addWidget(button, i // 2, i % 2)
 
         main_layout.addLayout(grid_layout)
-
-    def open_gift(self, box_number):
-        dialog = UI_luck(self.centralwidget)
-        dialog.exec()
-
-    def open_gift_1(self, box_number):
-        dialog = UI_noluck(self.centralwidget)
-        dialog.exec()
 
 if __name__ == "__main__":
     import sys
